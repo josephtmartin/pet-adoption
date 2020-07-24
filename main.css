@@ -6,3 +6,49 @@
 body {
   background-color: aquamarine;
 }
+
+#petCard {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.pet {
+  background-color: lightskyblue;
+  border: 1px solid black;
+  width: 30%;
+  margin: 10px;
+}
+
+.petName,
+.petImg,
+.petColor,
+.petSkill,
+.petType {
+  display: flex;
+  justify-content: center;
+}
+
+.petName {
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+.petTypeDog {
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+.petTypeCat {
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.petTypeDino {
+  background-color: orange;
+  padding: 10px;
+}
+
+.petImg {
+  padding: 10px;
+}

@@ -63,7 +63,13 @@ const createPetCards = () => {
     domString += `<div class="petImg"><img src=${petCards[i].image} alt="screenshot"></div>`;
     domString += `<div class="petColor">${petCards[i].color}</div>`;
     domString += `<div class="petSkill">${petCards[i].specialSkill}</div>`;
-    domString += `<div class="petType">${petCards[i].typeOfPet}</div>`;
+    if (petCards[i].typeOfPet === "Dog") {
+        domString += `<div class="petTypeDog">${petCards[i].typeOfPet}</div>`
+    } else if (petCards[i].typeOfPet === "Cat") {
+        domString += `<div class="petTypeCat">${petCards[i].typeOfPet}</div>`
+    } else if (petCards[i].typeOfPet === "Dino") {
+        domString += `<div class="petTypeDino">${petCards[i].typeOfPet}</div>`
+    }
     domString += `</div>`;
   }
 

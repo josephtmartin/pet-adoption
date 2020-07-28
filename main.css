@@ -35,16 +35,22 @@ body {
 }
 
 .petTypeDog {
+  display: flex;
+  justify-content: center;
   background-color: lightgreen;
   padding: 10px;
 }
 
 .petTypeCat {
+  display: flex;
+  justify-content: center;
   background-color: lightblue;
   padding: 10px;
 }
 
-.petTypeDino {
+.petTypeBunny {
+  display: flex;
+  justify-content: center;
   background-color: orange;
   padding: 10px;
 }

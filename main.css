@@ -4,8 +4,81 @@
 }
 
 body {
-  background-color: aquamarine;
+  background-color: lightcoral;
 }
+
+.container {
+  margin-top: 3px;
+  text-align: center;
+}
+
+.btn-all {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.btn-all:hover {background-color: #666}
+
+.btn-cat {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: lightblue;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.btn-cat:hover {background-color: #666}
+
+.btn-dog {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.btn-dog:hover {background-color: #666}
+
+.btn-bunny {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: orange;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.btn-bunny:hover {background-color: #666}
 
 #petCard {
   display: flex;
@@ -34,17 +107,17 @@ body {
   padding: 10px;
 }
 
-.petTypeDog {
-  display: flex;
-  justify-content: center;
-  background-color: lightgreen;
-  padding: 10px;
-}
-
 .petTypeCat {
   display: flex;
   justify-content: center;
   background-color: lightblue;
+  padding: 10px;
+}
+
+.petTypeDog {
+  display: flex;
+  justify-content: center;
+  background-color: #4caf50;
   padding: 10px;
 }
 

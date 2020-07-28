@@ -60,20 +60,20 @@ const handleButtonClick = (e) => {
     }
   }
 
-  // createPetCards(selectedPets)
-  // //  CHANGE BACKGROUND COLOR
-  // const bodySelector = document.querySelector('body');
-  // if (buttonId === 'Cat') {
-  //   bodySelector.style.backgroundColor = 'purple';
-  // } else if (buttonId === 'Dog') {
-  //   bodySelector.style.backgroundColor = 'blue';
-  // } else if (buttonId === 'Bunny') {
-  //   bodySelector.style.backgroundColor = 'red';
-  // } else {
-  //   bodySelector.style.backgroundColor = 'rgb(175, 196, 175)';
-  // }
-  // || buttonId === e.currentTarget.id
-  if (buttonId === 'All') {
+  createPetCards(selectedPets)
+  //  CHANGE BACKGROUND COLOR
+  const bodySelector = document.querySelector('body');
+  if (buttonId === 'Cat') {
+    bodySelector.style.backgroundColor = 'lightblue';
+  } else if (buttonId === 'Dog') {
+    bodySelector.style.backgroundColor = '#4caf50';
+  } else if (buttonId === 'Bunny') {
+    bodySelector.style.backgroundColor = 'orange';
+  } else {
+    bodySelector.style.backgroundColor = 'lightcoral';
+  }
+
+  if (buttonId === 'All' || buttonId === e.currentTarget.id) {
     createPetCards(petCards);
   } else {
     createPetCards(selectedPets);

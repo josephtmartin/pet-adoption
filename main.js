@@ -1,61 +1,92 @@
 const petCards = [
   {
     image:
-      "https://pbs.twimg.com/profile_images/1097349761189859330/5652XPXc_400x400.jpg",
-    name: "Coughy Boi",
-    color: "Orange",
-    specialSkill: "Violent Coughing",
-    typeOfPet: "Cat",
+      'https://thearkpets.org/wp-content/uploads/2019/07/DSCF1066-250x350.jpg',
+    name: 'Coughy Boi',
+    color: 'White/Grey',
+    specialSkill: 'Violent Coughing',
+    typeOfPet: 'Cat',
   },
   {
     image:
-      "https://i.pinimg.com/236x/25/6a/8f/256a8f69b3ec7d149295e50053e2c398--golden-retriever-names-golden-retriever-puppy.jpg",
-    name: "Bork",
-    color: "Gold",
-    specialSkill: "All The Borks and Nom Noms",
-    typeOfPet: "Dog",
+      'https://i.pinimg.com/originals/f4/f1/01/f4f101265c1111cb4ef1c69fa1f877f4.jpg',
+    name: 'Bork',
+    color: 'Gold',
+    specialSkill: 'All The Borks and Nom Noms',
+    typeOfPet: 'Dog',
   },
   {
     image:
-      "https://i.pinimg.com/236x/3b/45/24/3b45240a27ed32d7b68792405c54c421--hunting-trips-jurassic-park.jpg",
-    name: "Chris Pratt",
-    color: "Brown",
-    specialSkill: "Intimidation",
-    typeOfPet: "Dino",
+      'https://i.pinimg.com/originals/2a/06/ec/2a06ecf942b265e3e1876b66c2989ac8.jpg',
+    name: 'Chris Pratt',
+    color: 'White',
+    specialSkill: 'Intimidation',
+    typeOfPet: 'Bunny',
   },
   {
     image:
-      "https://pbs.twimg.com/profile_images/1097349761189859330/5652XPXc_400x400.jpg",
-    name: "Coughy Boi",
-    color: "Orange",
-    specialSkill: "Violent Coughing",
-    typeOfPet: "Cat",
+      'https://thearkpets.org/wp-content/uploads/2019/07/DSCF1066-250x350.jpg',
+    name: 'Coughy Boi',
+    color: 'White/Grey',
+    specialSkill: 'Violent Coughing',
+    typeOfPet: 'Cat',
   },
   {
     image:
-      "https://i.pinimg.com/236x/25/6a/8f/256a8f69b3ec7d149295e50053e2c398--golden-retriever-names-golden-retriever-puppy.jpg",
-    name: "Bork",
-    color: "Gold",
-    specialSkill: "All The Borks and Nom Noms",
-    typeOfPet: "Dog",
+      'https://i.pinimg.com/originals/f4/f1/01/f4f101265c1111cb4ef1c69fa1f877f4.jpg',
+    name: 'Bork',
+    color: 'Gold',
+    specialSkill: 'All The Borks and Nom Noms',
+    typeOfPet: 'Dog',
   },
   {
     image:
-      "https://i.pinimg.com/236x/3b/45/24/3b45240a27ed32d7b68792405c54c421--hunting-trips-jurassic-park.jpg",
-    name: "Chris Pratt",
-    color: "Brown",
-    specialSkill: "Intimidation",
-    typeOfPet: "Dino",
+      'https://i.pinimg.com/originals/2a/06/ec/2a06ecf942b265e3e1876b66c2989ac8.jpg',
+    name: 'Chris Pratt',
+    color: 'White',
+    specialSkill: 'Intimidation',
+    typeOfPet: 'Bunny',
   },
 ];
+
+const handleButtonClick = (e) => {
+  const buttonId = e.target.id;
+
+  const selectedPets = [];
+
+  for (let i = 0; i < petCards.length; i++) {
+    if (petCards[i].typeOfPet === buttonId) {
+      selectedPets.push(petCards[i]);
+    }
+  }
+
+  createPetCards(selectedPets)
+  //  CHANGE BACKGROUND COLOR
+  const bodySelector = document.querySelector('body');
+  if (buttonId === 'Cat') {
+    bodySelector.style.backgroundColor = 'lightblue';
+  } else if (buttonId === 'Dog') {
+    bodySelector.style.backgroundColor = '#4caf50';
+  } else if (buttonId === 'Bunny') {
+    bodySelector.style.backgroundColor = 'orange';
+  } else {
+    bodySelector.style.backgroundColor = 'lightcoral';
+  }
+
+  if (buttonId === 'All' || buttonId === e.currentTarget.id) {
+    createPetCards(petCards);
+  } else {
+    createPetCards(selectedPets);
+  }
+};
 
 const printToDom = (divId, textToPrint) => {
   const selectedDiv = document.getElementById(divId);
   selectedDiv.innerHTML = textToPrint;
 };
 
-const createPetCards = () => {
-  let domString = "";
+const createPetCards = (petCards) => {
+  let domString = '';
 
   for (let i = 0; i < petCards.length; i++) {
     domString += `<div class="pet">`;
@@ -63,17 +94,28 @@ const createPetCards = () => {
     domString += `<div class="petImg"><img src=${petCards[i].image} alt="screenshot"></div>`;
     domString += `<div class="petColor">${petCards[i].color}</div>`;
     domString += `<div class="petSkill">${petCards[i].specialSkill}</div>`;
-    if (petCards[i].typeOfPet === "Dog") {
-        domString += `<div class="petTypeDog">${petCards[i].typeOfPet}</div>`
-    } else if (petCards[i].typeOfPet === "Cat") {
-        domString += `<div class="petTypeCat">${petCards[i].typeOfPet}</div>`
-    } else if (petCards[i].typeOfPet === "Dino") {
-        domString += `<div class="petTypeDino">${petCards[i].typeOfPet}</div>`
+    if (petCards[i].typeOfPet === 'Dog') {
+      domString += `<div class="petTypeDog">${petCards[i].typeOfPet}</div>`;
+    } else if (petCards[i].typeOfPet === 'Cat') {
+      domString += `<div class="petTypeCat">${petCards[i].typeOfPet}</div>`;
+    } else if (petCards[i].typeOfPet === 'Bunny') {
+      domString += `<div class="petTypeBunny">${petCards[i].typeOfPet}</div>`;
     }
     domString += `</div>`;
   }
 
-  printToDom("petCard", domString);
+  printToDom('petCard', domString);
 };
 
-createPetCards();
+const buttonEvents = () => {
+  document
+    .querySelector('#petType-buttons')
+    .addEventListener('click', handleButtonClick);
+};
+
+const init = () => {
+  buttonEvents();
+  createPetCards(petCards);
+};
+
+init();

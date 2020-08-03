@@ -15,3 +15,9 @@ Help me help them!
 ### Demo 
 
 ![Pet Adoption Demo](https://github.com/josephtmartin/pet-adoption/blob/master/demo/personal-bio-site.gif)
+
+### Technologies Used
+
+* HTML
+* CSS
+* JavaScript

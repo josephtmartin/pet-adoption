@@ -15,6 +15,7 @@ Help me help them!
 ### Demo 
 
 ![Pet Adoption Demo](https://github.com/josephtmartin/pet-adoption/blob/master/demo/personal-bio-site.gif)
+
 [Pet Adoption Site](https://petadoptioncenter.netlify.app/)
 
 ### Technologies Used
